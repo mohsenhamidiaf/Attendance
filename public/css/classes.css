@@ -1,0 +1,144 @@
+:root {
+    --bg: #f4f7fb;
+    --surface: #ffffff;
+    --primary: #4f46e5;
+    --primary-hover: #4338ca;
+    --text: #172033;
+    --muted: #718096;
+    --border: #e5eaf2;
+    --shadow: 0 12px 35px rgba(25, 42, 70, 0.07);
+}
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    min-height: 100vh;
+    padding: 40px 20px;
+}
+.header {
+    display: flex;
+}
+h1 {
+    font-size: 30px;
+    font-weight: 800;
+    letter-spacing: -0.7px;
+    margin-bottom: 10px;
+}
+body > h1, body > .classes-container {
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+}
+body > h1 {
+    margin-bottom: 28px;
+}
+.classes-container {
+    width: 100%;
+}
+.class-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 24px;
+    margin-bottom: 16px;
+    box-shadow: var(--shadow);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.class-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 16px 40px rgba(25, 42, 70, 0.11);
+}
+.class-card h3 {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 12px;
+}
+.class-card p {
+    color: var(--muted);
+    font-size: 14px;
+    line-height: 1.7;
+}
+.empty-state {
+    background: var(--surface);
+    border: 1px dashed #cbd5e1;
+    border-radius: 16px;
+    padding: 48px 20px;
+    text-align: center;
+    color: var(--muted);
+    font-size: 15px;
+}
+@media (max-width: 600px) {
+    body {
+        padding: 28px 16px;
+    }
+    h1 {
+        font-size: 25px;
+    }
+    .class-card {
+        padding: 20px;
+        border-radius: 13px;
+    }
+    .class-card h3 {
+        font-size: 18px;
+    }
+}
+button {
+    margin-top: 18px;
+    padding: 8px 14px;
+    border: none;
+    border-radius: 9px;
+    background: var(--primary);
+    color: #fff;
+    font-size: 15px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+button:hover {
+    background: var(--primary);
+}
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+form lable {
+    font-size: 14px;
+    font-weight: 700;
+    margin-top: 8px;
+}
+form input {
+    width: 100%;
+    padding: 13px 14px;
+    border: 1px solid var(--border);
+    border-radius: 9px;
+    background: #fff;
+    color: var(--text);
+    font-size: 15px;
+    outline: none;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+form input:focus {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.12);
+}
+form button {
+    margin-top: 18px;
+    padding: 8px 14px;
+    border: none;
+    border-radius: 9px;
+    background: var(--primary);
+    color: #fff;
+    font-size: 15px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+form button:hover {
+    background: var(--primary);
+}
